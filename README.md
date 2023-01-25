@@ -1,1 +1,1 @@
-CQF Backtesting Package"# CQF-Backtesting" 
+CQF Backtesting Package
