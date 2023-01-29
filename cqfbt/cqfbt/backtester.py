@@ -33,14 +33,14 @@ class engine:
         # unfortunately this means cryptocurrencies cannot be in the
         # portfolio while regular stocks are, I will work on this for version 0.0.2
         if len(ptfl) != 0:
-            length = len(pd.read_csv("src\\data\\"+ptfl[0]+"_hist.csv"))
+            length = len(pd.read_csv("cqfbt\\data\\"+ptfl[0]+"_hist.csv"))
             engine.arr_length = length
             engine.arr = np.ndarray((len(ptfl), engine.arr_length, 7))
 
         idx = 0
         for i in range(0, len(ptfl)):
             ticker = ptfl[i]
-            df = pd.read_csv("src\\data\\"+f"{ticker}_hist.csv")
+            df = pd.read_csv("cqfbt\\data\\"+f"{ticker}_hist.csv")
             engine.arr[idx, :, :] = df.loc[0:engine.arr_length,
                                            'Open':'Stock Splits'].to_numpy()
             if idx == 0:
@@ -57,7 +57,7 @@ class engine:
             ticker = ptfl[i]
             stock = yf.Ticker(ticker)
             hist = stock.history(start=start, end=end, interval=interval)
-            hist.to_csv("src\\data\\" + f"{ticker}_hist.csv")
+            hist.to_csv("cqfbt\\data\\" + f"{ticker}_hist.csv")
 
     # Takes in path to csv data and adds it to the data folder,
     # edits engine.arr, engine.portfolio and engine.dates

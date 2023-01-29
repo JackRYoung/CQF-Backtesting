@@ -1,5 +1,5 @@
 # Test runner, not to be included in final package
-from src import backtester, strategy
+from cqfbt import backtester, strategy
 # These imports will not be needed, as the user will have imported
 # the cqfbt package wherin these are contained
 
