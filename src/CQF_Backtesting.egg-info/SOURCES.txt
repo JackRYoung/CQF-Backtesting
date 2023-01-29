@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-setup.cfg
-src/CQF_Backtesting.egg-info/PKG-INFO
-src/CQF_Backtesting.egg-info/SOURCES.txt
-src/CQF_Backtesting.egg-info/dependency_links.txt
-src/CQF_Backtesting.egg-info/top_level.txt
